@@ -1,0 +1,106 @@
+setup: |
+  echo "Done installing project dependencies!"
+---
+
+# Reminder for ^^^:
+# All commands executed in the setup block are done in a
+# one-by-one fashion from the current working directory. This means
+# that there is no history associated with running the commands and
+# thus multiple commands must be run in a single chain.
+
+# perform checks on a file
+- README.md:
+    - description: Ensure that the README.md file exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in README.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+
+- blogpost.md:
+    - description: Ensure that the blogpost.md file exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in blogpost.md
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+        
+- calculate_mean.py:
+    - description: Ensure that the calculate_mean.py file exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in calculate_mean.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+        
+- calculate_median.py:
+    - description: Ensure that the calculate_median.py file exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in calculate_median.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+        
+- calculate_mode.py:
+    - description: Ensure that the calculate_mode.py file exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in calculate_mode.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+
+- calculate_variance.py:
+    - description: Ensure that the calculate_variance.py file exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in calculate_variance.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+
+- calculate_standard_deviation.py:
+    - description: Ensure that the calculate_standard_deviation.py file exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in calculate_standard_deviation.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+
+- calculate_range.py:
+    - description: Ensure that the calculate_range.py file exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in calculate_range.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+
+- calculate_quartiles.py:
+    - description: Ensure that the calculate_quartiles.py file exists
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in calculate_quartiles.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+   
+  # count number of commits in the GitHub repository
+- description: Have at least 4 of commits in repository
+  check: CountCommits
+  options:
+    count: 4
