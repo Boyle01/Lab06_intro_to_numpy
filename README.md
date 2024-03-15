@@ -1,4 +1,4 @@
-
+Boyle
 # Lab 06 - Intro to Numpy
 
 Spyder comes with the numpy library. The numpy library allows data scientists
